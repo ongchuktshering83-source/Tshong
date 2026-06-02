@@ -4,6 +4,7 @@ import (
 	"database/sql"
 	"encoding/json"
 	"net/http"
+	"log"
 
 	"tshongmart/models"
 	"tshongmart/utils"
@@ -66,9 +67,11 @@ func (h *AuthHandler) SignupHandler(w http.ResponseWriter, r *http.Request) {
 	)
 
 	if err != nil {
+		log.Println("Signup database error:", err)
+
 		utils.SendJSON(w, http.StatusBadRequest, models.APIResponse{
 			Success: false,
-			Message: "Email may already be registered",
+			Message: "Could not create account. Please check server logs.",
 		})
 		return
 	}

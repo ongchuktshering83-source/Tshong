@@ -21,7 +21,6 @@ func RegisterRoutes(db *sql.DB) {
 	http.HandleFunc("/api/admin-login", handlers.AdminLoginHandler)
 	http.HandleFunc("/api/users", adminHandler.GetUsersHandler)
 	http.HandleFunc("/api/users/status", adminHandler.UpdateUserStatusHandler)
-	http.HandleFunc("/api/admin/clear-test-data", adminHandler.ClearTestDataHandler)
 
 	http.HandleFunc("/api/profile", userHandler.UpdateProfileHandler)
 	http.Handle("/uploads/", http.StripPrefix("/uploads/", http.FileServer(http.Dir("uploads"))))
