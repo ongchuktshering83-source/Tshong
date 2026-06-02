@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Add Product | TshongMart</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">TshongMart</a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="logout-btn" id="logoutBtn">Logout</button>
+        <button class="menu-btn" id="menuBtn">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="auth-page">
+    <section class="auth-card product-form-card">
+      <div class="auth-heading">
+        <p class="eyebrow">Sell automotive product</p>
+        <h1>Add New Product</h1>
+        <p>Register your vehicle or automotive item for buyers to view.</p>
+      </div>
+
+      <form class="auth-form" id="addProductForm">
+        <div class="form-group">
+          <label for="productTitle">Product Title</label>
+          <input type="text" id="productTitle" placeholder="Example: Toyota Hilux 2018" required />
+        </div>
+
+        <div class="form-group">
+          <label for="productCategory">Category</label>
+          <select id="productCategory" required>
+            <option value="">Select category</option>
+            <option value="car">Car</option>
+            <option value="bike">Bike</option>
+            <option value="pickup">Pickup</option>
+            <option value="parts">Parts</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="productPrice">Price</label>
+          <input type="text" id="productPrice" placeholder="Example: Nu. 850,000" required />
+        </div>
+
+        <div class="form-group">
+          <label for="productLocation">Location</label>
+          <input type="text" id="productLocation" placeholder="Example: Thimphu" required />
+        </div>
+
+        <div class="form-group">
+          <label for="productContact">Seller Contact</label>
+          <input type="text" id="productContact" placeholder="Phone / WhatsApp / Telegram" required />
+        </div>
+
+        <div class="form-group">
+          <label for="productImage">Product Image <span>Optional for now</span></label>
+          <input type="file" id="productImage" accept="image/*" />
+        </div>
+
+        <div class="form-group">
+          <label for="productDescription">Description</label>
+          <textarea id="productDescription" rows="5" placeholder="Describe condition, model, mileage, service history, etc." required></textarea>
+        </div>
+
+        <button type="submit" class="btn auth-btn">Add Product</button>
+
+        <p class="form-message" id="productMessage"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/add-product.js"></script>
+</body>
+</html>

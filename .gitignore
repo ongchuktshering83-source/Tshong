@@ -1,0 +1,23 @@
+# Go build files
+backend/tshongmart
+backend/main
+*.exe
+
+# Uploaded images/local files
+backend/uploads/*
+
+# Keep uploads folder structure
+!backend/uploads/.gitkeep
+
+# Environment files
+.env
+*.env
+
+# Docker/database local files
+postgres-data/
+*.db
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact | TshongMart</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">TshongMart</a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="login.html" class="login-link">Login</a>
+        <a href="signup.html" class="btn btn-small">Sign Up</a>
+        <button class="menu-btn" id="menuBtn">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">Contact support</p>
+      <h1>Need help with a listing or account?</h1>
+      <p>
+        Contact the TshongMart team for support, questions, listing concerns, or general platform help.
+      </p>
+    </section>
+
+    <section class="contact-section">
+      <div class="contact-grid">
+        <div class="contact-info-card">
+          <p class="eyebrow">Get in touch</p>
+          <h2>We are here to help.</h2>
+          <p>
+            For the first version of TshongMart, this form will show a success message.
+            Later, we will connect it to the Go backend so messages can be saved or emailed.
+          </p>
+
+          <div class="contact-info-list">
+            <div>
+              <span>Email</span>
+              <strong>support@tshongmart.com</strong>
+            </div>
+
+            <div>
+              <span>Location</span>
+              <strong>Bhutan</strong>
+            </div>
+
+            <div>
+              <span>Support Type</span>
+              <strong>Listings, accounts, and seller support</strong>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="contactName">Full Name</label>
+            <input type="text" id="contactName" placeholder="Enter your name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="contactEmail">Email Address</label>
+            <input type="email" id="contactEmail" placeholder="example@gmail.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="contactSubject">Subject</label>
+            <select id="contactSubject" required>
+              <option value="">Choose a subject</option>
+              <option value="listing">Listing support</option>
+              <option value="account">Account issue</option>
+              <option value="seller">Seller concern</option>
+              <option value="general">General question</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" rows="6" placeholder="Write your message..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn auth-btn">Send Message</button>
+
+          <p class="form-message" id="contactMessageStatus"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <h3>TshongMart</h3>
+      <p>A trusted marketplace for second-hand automotive buying and selling.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About</a>
+    </div>
+
+    <p>© 2026 TshongMart. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

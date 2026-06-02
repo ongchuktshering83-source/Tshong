@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Admin Dashboard | TshongMart</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar">
+        <a href="index.html" class="logo">TshongMart</a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="admin.html" class="active">Admin</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="logout-btn" id="logoutBtn">Logout</button>
+          <button class="menu-btn" id="menuBtn">☰</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="dashboard-page">
+      <section class="dashboard-hero">
+        <div>
+          <p class="eyebrow">Admin panel</p>
+          <h1>Manage TshongMart.</h1>
+          <p>Review users, monitor listings, and manage platform activity.</p>
+        </div>
+
+        <a href="products.html" class="btn">View Products</a>
+      </section>
+
+      <section class="admin-grid">
+        <article class="stat-card">
+          <span>Total Registered Users</span>
+          <h3 id="adminUserCount">0</h3>
+        </article>
+
+        <article class="stat-card">
+          <span>Total User Listings</span>
+          <h3 id="adminProductCount">0</h3>
+        </article>
+
+        <article class="stat-card">
+          <span>Pending Reports</span>
+          <h3>0</h3>
+        </article>
+      </section>
+
+      <section class="dashboard-section admin-section">
+        <div class="section-title-row">
+          <div>
+            <p class="eyebrow">Product management</p>
+            <h2>User Product Listings</h2>
+          </div>
+        </div>
+
+        <div class="admin-table-wrapper">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Product</th>
+                <th>Category</th>
+                <th>Seller</th>
+                <th>Location</th>
+                <th>Price</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+
+            <tbody id="adminProductTable">
+              <!-- Products load here -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="dashboard-section admin-section">
+        <div class="section-title-row">
+          <div>
+            <p class="eyebrow">Users</p>
+            <h2>Registered Users</h2>
+          </div>
+        </div>
+
+        <div class="admin-table-wrapper">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Joined</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+
+            <tbody id="adminUsersTable">
+              <!-- Users load here -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="dashboard-section admin-section">
+        <div class="section-title-row">
+          <div>
+            <p class="eyebrow">Support</p>
+            <h2>Contact Messages</h2>
+          </div>
+        </div>
+
+        <div class="admin-messages-list" id="adminMessagesList">
+          <!-- Contact messages load here -->
+        </div>
+      </section>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/admin.js"></script>
+  </body>
+</html>

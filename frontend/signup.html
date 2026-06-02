@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sign Up | TshongMart</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">TshongMart</a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="login.html" class="login-link">Login</a>
+        <a href="signup.html" class="btn btn-small">Sign Up</a>
+        <button class="menu-btn" id="menuBtn">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="auth-page">
+    <section class="auth-card">
+      <div class="auth-heading">
+        <p class="eyebrow">Create account</p>
+        <h1>Join TshongMart</h1>
+        <p>Sign up to list vehicles, save products, and manage your profile.</p>
+      </div>
+
+      <form class="auth-form" id="signupForm">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="example@gmail.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="contactInfo">Contact Info</label>
+          <input type="text" id="contactInfo" name="contactInfo" placeholder="Phone / WhatsApp / Telegram" required />
+        </div>
+
+        <div class="form-group">
+          <label for="profilePic">Profile Picture <span>Optional</span></label>
+          <input type="file" id="profilePic" name="profilePic" accept="image/*" />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Create a password" required />
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required />
+        </div>
+
+        <button type="submit" class="btn auth-btn">Create Account</button>
+
+        <p class="auth-switch">
+          Already have an account?
+          <a href="login.html">Login here</a>
+        </p>
+
+        <p class="form-message" id="signupMessage"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

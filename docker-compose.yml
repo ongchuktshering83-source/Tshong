@@ -1,0 +1,34 @@
+services:
+  backend:
+    build: .
+    container_name: tshongmart_backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - database
+    environment:
+      DB_HOST: database
+      DB_PORT: 5432
+      DB_USER: tshong_user
+      DB_PASSWORD: tshong_password
+      DB_NAME: tshongmart_db
+      ADMIN_PASSWORD: tshongadmin123
+    volumes:
+      - ./backend/uploads:/app/backend/uploads
+
+  database:
+    image: postgres:16-alpine
+    container_name: tshongmart_database
+    restart: always
+    environment:
+      POSTGRES_USER: tshong_user
+      POSTGRES_PASSWORD: tshong_password
+      POSTGRES_DB: tshongmart_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - tshongmart_db_data:/var/lib/postgresql/data
+      - ./backend/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+volumes:
+  tshongmart_db_data:

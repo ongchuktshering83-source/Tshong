@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Admin Login | TshongMart</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">TshongMart</a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="login.html" class="login-link">Login</a>
+        <a href="signup.html" class="btn btn-small">Sign Up</a>
+        <button class="menu-btn" id="menuBtn">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="auth-page">
+    <section class="auth-card">
+      <div class="auth-heading">
+        <p class="eyebrow">Admin access</p>
+        <h1>Admin Login</h1>
+        <p>Enter the admin password to access the management panel.</p>
+      </div>
+
+      <form class="auth-form" id="adminLoginForm">
+        <div class="form-group">
+          <label for="adminPassword">Admin Password</label>
+          <input type="password" id="adminPassword" placeholder="Enter admin password" required />
+        </div>
+
+        <button type="submit" class="btn auth-btn">Enter Admin Panel</button>
+
+        <p class="form-message" id="adminLoginMessage"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/admin-login.js"></script>
+</body>
+</html>

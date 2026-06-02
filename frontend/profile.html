@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Edit Profile | TshongMart</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">TshongMart</a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="logout-btn" id="logoutBtn">Logout</button>
+        <button class="menu-btn" id="menuBtn">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="auth-page">
+    <section class="auth-card product-form-card">
+      <div class="auth-heading">
+        <p class="eyebrow">Account settings</p>
+        <h1>Edit Profile</h1>
+        <p>Update your account details and contact information.</p>
+      </div>
+
+      <form class="auth-form" id="profileForm">
+        <div class="form-group">
+          <label for="profileFullName">Full Name</label>
+          <input type="text" id="profileFullName" required />
+        </div>
+
+        <div class="form-group">
+          <label for="profileEmailInput">Email Address</label>
+          <input type="email" id="profileEmailInput" required />
+        </div>
+
+        <div class="form-group">
+          <label for="profileContactInput">Contact Info</label>
+          <input type="text" id="profileContactInput" required />
+        </div>
+
+        <div class="form-group">
+          <label for="profilePicture">Profile Picture <span>Later backend upload</span></label>
+          <input type="file" id="profilePicture" accept="image/*" />
+        </div>
+
+        <div class="form-group">
+          <label for="currentPassword">Current Password</label>
+          <input type="password" id="currentPassword" placeholder="Enter current password to confirm changes" required />
+        </div>
+
+        <div class="form-group">
+          <label for="newPassword">New Password <span>Optional</span></label>
+          <input type="password" id="newPassword" placeholder="Leave blank if you do not want to change password" />
+        </div>
+
+        <button type="submit" class="btn auth-btn">Save Changes</button>
+
+        <a href="dashboard.html" class="auth-back-link">← Back to Dashboard</a>
+
+        <p class="form-message" id="profileMessage"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>

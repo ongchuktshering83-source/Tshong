@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | TshongMart</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">TshongMart</a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="login.html" class="login-link">Login</a>
+        <a href="signup.html" class="btn btn-small">Sign Up</a>
+        <button class="menu-btn" id="menuBtn">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">Browse listings</p>
+      <h1>Find second-hand automotive deals.</h1>
+      <p>
+        Explore vehicles and automotive products listed by sellers. Use search and filters
+        to find what matches your need.
+      </p>
+    </section>
+
+    <section class="products-section">
+      <div class="filter-bar">
+        <input type="text" id="searchInput" placeholder="Search by name, brand, or location..." />
+
+        <select id="categoryFilter">
+          <option value="all">All Categories</option>
+          <option value="car">Cars</option>
+          <option value="bike">Bikes</option>
+          <option value="pickup">Pickups</option>
+          <option value="parts">Parts</option>
+        </select>
+      </div>
+
+      <div class="products-grid" id="productsGrid">
+        <!-- Products will be loaded by JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <h3>TshongMart</h3>
+      <p>A trusted marketplace for second-hand automotive buying and selling.</p>
+    </div>
+
+    <p>© 2026 TshongMart. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>

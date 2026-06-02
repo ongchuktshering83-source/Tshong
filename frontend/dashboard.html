@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Dashboard | TshongMart</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="navbar">
+        <a href="index.html" class="logo">TshongMart</a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="dashboard.html" class="active">Dashboard</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="logout-btn" id="logoutBtn">Logout</button>
+          <button class="menu-btn" id="menuBtn">☰</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="dashboard-page">
+      <section class="dashboard-hero">
+        <div>
+          <p class="eyebrow">User dashboard</p>
+          <h1>Welcome back, <span id="dashboardName">User</span>.</h1>
+          <p>
+            Manage your profile, listings, saved products, and purchase tracking
+            from one place.
+          </p>
+        </div>
+
+        <a href="add-product.html" class="btn">Add New Product</a>
+      </section>
+
+      <section class="dashboard-grid">
+        <aside class="profile-panel">
+          <div class="profile-avatar" id="profileAvatar">TM</div>
+
+          <h2 id="profileName">User Name</h2>
+          <p id="profileEmail">user@email.com</p>
+
+          <div class="profile-details">
+            <div>
+              <span>Contact</span>
+              <strong id="profileContact">Not added</strong>
+            </div>
+
+            <div>
+              <span>Account Type</span>
+              <strong>Buyer / Seller</strong>
+            </div>
+          </div>
+
+          <a href="profile.html" class="btn btn-outline profile-btn">
+            Edit Profile
+          </a>
+        </aside>
+
+        <section class="dashboard-content">
+          <div class="stats-grid">
+            <article class="stat-card">
+              <span>My Listings</span>
+              <h3 id="listingCount">0</h3>
+            </article>
+
+            <article class="stat-card">
+              <span>Saved Items</span>
+              <h3 id="savedCount">0</h3>
+            </article>
+
+            <article class="stat-card">
+              <span>Purchases</span>
+              <h3>0</h3>
+            </article>
+          </div>
+
+          <section class="dashboard-section">
+            <div class="section-title-row">
+              <div>
+                <p class="eyebrow">Selling</p>
+                <h2>My Listings</h2>
+              </div>
+
+              <a href="add-product.html" class="small-link">+ Add Product</a>
+            </div>
+
+            <div class="dashboard-list" id="myListings">
+              <!-- My listings load here -->
+            </div>
+          </section>
+
+          <section class="dashboard-section">
+            <div class="section-title-row">
+              <div>
+                <p class="eyebrow">Buyer Activity</p>
+                <h2>Saved Products</h2>
+              </div>
+            </div>
+
+            <div class="dashboard-list" id="savedProductsList">
+              <!-- Saved products load here -->
+            </div>
+          </section>
+
+          <section class="dashboard-section">
+            <div class="section-title-row">
+              <div>
+                <p class="eyebrow">Tracking</p>
+                <h2>Purchase Tracking</h2>
+              </div>
+            </div>
+
+            <div class="tracking-box">
+              <div class="tracking-step active">
+                <span>1</span>
+                <p>Product Selected</p>
+              </div>
+
+              <div class="tracking-line"></div>
+
+              <div class="tracking-step">
+                <span>2</span>
+                <p>Seller Contacted</p>
+              </div>
+
+              <div class="tracking-line"></div>
+
+              <div class="tracking-step">
+                <span>3</span>
+                <p>Payment Confirmed</p>
+              </div>
+            </div>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

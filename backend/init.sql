@@ -1,0 +1,35 @@
+CREATE TABLE IF NOT EXISTS users (
+  id SERIAL PRIMARY KEY,
+  full_name VARCHAR(100) NOT NULL,
+  email VARCHAR(150) UNIQUE NOT NULL,
+  contact_info VARCHAR(100) NOT NULL,
+  password_hash TEXT NOT NULL,
+  profile_picture TEXT,
+  role VARCHAR(20) DEFAULT 'user',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS products (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  title VARCHAR(150) NOT NULL,
+  category VARCHAR(50) NOT NULL,
+  price VARCHAR(50) NOT NULL,
+  location VARCHAR(100) NOT NULL,
+  contact VARCHAR(100) NOT NULL,
+  description TEXT NOT NULL,
+  image_path TEXT,
+  status VARCHAR(30) DEFAULT 'active',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS contact_messages (
+  id SERIAL PRIMARY KEY,
+  full_name VARCHAR(100) NOT NULL,
+  email VARCHAR(150) NOT NULL,
+  subject VARCHAR(100) NOT NULL,
+  message TEXT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+status VARCHAR(20) DEFAULT 'active',
