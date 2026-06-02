@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 
 	"tshongmart/config"
 	"tshongmart/routes"
@@ -20,9 +21,14 @@ func main() {
 
 	routes.RegisterRoutes(db)
 
-	fmt.Println("Server started on port 8080")
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
 
-	err = http.ListenAndServe(":8080", nil)
+	fmt.Println("Server started on port " + port)
+
+	err = http.ListenAndServe(":"+port, nil)
 	if err != nil {
 		fmt.Println("Server error:", err)
 	}
