@@ -18,6 +18,12 @@ func main() {
 
 	log.Println("Connected to PostgreSQL database successfully.")
 	defer db.Close()
+	err = config.RunMigrations(db)
+	if err != nil {
+		log.Fatal("Database migration failed:", err)
+	}
+
+	log.Println("Database migrations completed successfully.")
 
 	routes.RegisterRoutes(db)
 
